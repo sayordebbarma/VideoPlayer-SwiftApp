@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2867545329CB7DAB003FCEC6 /* VideoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2867545229CB7DAB003FCEC6 /* VideoCard.swift */; };
 		28BD9E8F29CA333F0081395B /* VideoPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BD9E8E29CA333F0081395B /* VideoPlayerApp.swift */; };
 		28BD9E9129CA333F0081395B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BD9E9029CA333F0081395B /* ContentView.swift */; };
 		28BD9E9329CA33400081395B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28BD9E9229CA33400081395B /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2867545229CB7DAB003FCEC6 /* VideoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCard.swift; sourceTree = "<group>"; };
 		28BD9E8B29CA333F0081395B /* VideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BD9E8E29CA333F0081395B /* VideoPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerApp.swift; sourceTree = "<group>"; };
 		28BD9E9029CA333F0081395B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				28BD9E9E29CA340B0081395B /* QueryTags.swift */,
+				2867545229CB7DAB003FCEC6 /* VideoCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28BD9E9F29CA340B0081395B /* QueryTags.swift in Sources */,
+				2867545329CB7DAB003FCEC6 /* VideoCard.swift in Sources */,
 				28BD9E9129CA333F0081395B /* ContentView.swift in Sources */,
 				28BD9E8F29CA333F0081395B /* VideoPlayerApp.swift in Sources */,
 				28BD9EA129CA35120081395B /* videoManager.swift in Sources */,
