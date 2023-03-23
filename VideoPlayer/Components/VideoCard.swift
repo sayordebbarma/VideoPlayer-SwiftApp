@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct VideoCard: View {
+    var video: Video
+    
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            AsyncImage(url: URL(string: "")) { image in
+            AsyncImage(url: URL(string: video.image)) { image in
                 image.resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 160, height: 260)
@@ -24,19 +26,19 @@ struct VideoCard: View {
             }
             HStack {
                 Image(systemName: "play.fill")
-                    .padding(10)
+                    .padding(8)
                     .background(.ultraThinMaterial)
                     .cornerRadius(50)
                 
                 VStack(alignment: .leading) {
-                    Text("anime video")
+                    Text("\(video.duration)")
                         .font(.caption).bold()
-                    Text("by sample")
+                    Text("by \(video.user.name)")
                         .font(.caption).bold()
                         .multilineTextAlignment(.leading) // to not center the text even if its too long
                 }
             }
-            .padding()
+            .padding(8)
             .foregroundColor(.white)
         }
     }
@@ -44,6 +46,6 @@ struct VideoCard: View {
 
 struct VideoCard_Previews: PreviewProvider {
     static var previews: some View {
-        VideoCard()
+        VideoCard(video: previewVideo)
     }
 }

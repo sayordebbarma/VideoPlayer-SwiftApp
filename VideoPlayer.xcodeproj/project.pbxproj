@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		283E9FBA29CCCE780041CCF2 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283E9FB929CCCE780041CCF2 /* ModelData.swift */; };
+		283E9FC329CCD6A10041CCF2 /* videoData.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 283E9FC229CCD6A10041CCF2 /* videoData.geojson */; };
 		2867545329CB7DAB003FCEC6 /* VideoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2867545229CB7DAB003FCEC6 /* VideoCard.swift */; };
 		28BD9E8F29CA333F0081395B /* VideoPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BD9E8E29CA333F0081395B /* VideoPlayerApp.swift */; };
 		28BD9E9129CA333F0081395B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BD9E9029CA333F0081395B /* ContentView.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		283E9FB929CCCE780041CCF2 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		283E9FC229CCD6A10041CCF2 /* videoData.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videoData.geojson; sourceTree = "<group>"; };
 		2867545229CB7DAB003FCEC6 /* VideoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCard.swift; sourceTree = "<group>"; };
 		28BD9E8B29CA333F0081395B /* VideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BD9E8E29CA333F0081395B /* VideoPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerApp.swift; sourceTree = "<group>"; };
@@ -60,8 +64,9 @@
 				28BD9E8E29CA333F0081395B /* VideoPlayerApp.swift */,
 				28BD9EA229CA36290081395B /* Views */,
 				28BD9E9C29CA33D20081395B /* Components */,
-				28BD9E9229CA33400081395B /* Assets.xcassets */,
 				28BD9EA029CA35120081395B /* videoManager.swift */,
+				28BD9E9229CA33400081395B /* Assets.xcassets */,
+				283E9FC229CCD6A10041CCF2 /* videoData.geojson */,
 				28BD9E9429CA33400081395B /* Preview Content */,
 			);
 			path = VideoPlayer;
@@ -70,6 +75,7 @@
 		28BD9E9429CA33400081395B /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				283E9FB929CCCE780041CCF2 /* ModelData.swift */,
 				28BD9E9529CA33400081395B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -150,6 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				283E9FC329CCD6A10041CCF2 /* videoData.geojson in Resources */,
 				28BD9E9629CA33400081395B /* Preview Assets.xcassets in Resources */,
 				28BD9E9329CA33400081395B /* Assets.xcassets in Resources */,
 			);
@@ -167,6 +174,7 @@
 				28BD9E9129CA333F0081395B /* ContentView.swift in Sources */,
 				28BD9E8F29CA333F0081395B /* VideoPlayerApp.swift in Sources */,
 				28BD9EA129CA35120081395B /* videoManager.swift in Sources */,
+				283E9FBA29CCCE780041CCF2 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
