@@ -8,12 +8,18 @@
 import Foundation
 
 enum Query: String, CaseIterable {
-case nature, people, animal, food, ocean, anime
+case food, nature, people, animal, ocean, anime
 }
 
-class videoManager: ObservableObject {
+class VideoManager: ObservableObject {
     @Published private(set) var videos: [Video] = []
-    @Published var selectedQuery: Query = Query.nature
+    @Published var selectedQuery: Query = Query.food {
+        didSet {
+            Task.init {
+                await findVideos(topic: selectedQuery)
+            }
+        }
+    }
     
     init() {
         Task.init {
@@ -23,10 +29,10 @@ class videoManager: ObservableObject {
     
     func findVideos(topic: Query) async {
         do {
-            guard let url = URL(string: "https://api.pexels.com/videos/search?query=\(topic)&per_page=10&orientation=potrait") else { fatalError("URL missing")}
+            guard let url = URL(string: "https://api.pexels.com/videos/search?query=\(topic)&per_page=10&orientation=portrait") else { fatalError("URL missing")}
             
             var urlRequest = URLRequest(url: url)
-            urlRequest.setValue("YOUR_API_KEY", forHTTPHeaderField: "Authorization")
+            urlRequest.setValue("V7opVl5GCQJW6zZW524bJ5QYq1MkxyEB4cd5S0LkURrDbtc6DleH1LFL", forHTTPHeaderField: "Authorization") //YOUR_API_KEY
             
             let ( data, response ) = try await URLSession.shared.data(for: urlRequest)
             
@@ -36,8 +42,11 @@ class videoManager: ObservableObject {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let decodedData = try decoder.decode(ResponseBoby.self, from: data)
             
-            self.videos = []
-            self.videos = decodedData.videos
+            DispatchQueue.main.async {
+                self.videos = []
+                self.videos = decodedData.videos
+            }
+            //Publishing changes from background threads is not allowed; make sure to publish values from the main thread (via operators like receive(on:)) on model updates. we do DispatchQueue.main.async {}
             
         } catch {
             print("Error fetching data from pixels api: \(error)")
